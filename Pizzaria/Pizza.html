@@ -14,54 +14,92 @@
 </head>
 
 <body>
-    <div class="container">
+       <!-- Seção de Menu -->
+        <div class="container">
         <h1>JAPA PIZZA - SABOR PARA TODOS!</h1>
-        <div class="Menu"></div>
+        <div class="Menu">
+            <button onclick="mostrarSecao('cadastro')">
+                <i class="fa-solid fa-pizza-slice"></i>Cadastrar Pizza
+            </button>
 
-        <button onclick="mostrarSecao('cadastro')">
-            <i class="fa-solid fa-pizza-slice"></i>Cadastrar Pizza
-        </button>
+            <button onclick="mostrarSecao('consulta')">
+                <i class="fa-solid fa-magnifying-glass"></i>Consultar Pizza
+            </button>
 
-        <button onclick="mostrarSecao('consulta')">
-            <i class="fa-solid fa-magnifying-glass"></i>Consultar Pizza
-        </button>
+            <button onclick="mostrarSecao('alterar')">
+                <i class="fa-solid fa-edit icon"></i>Alterar Pizza
+            </button>
 
-        <button onclick="mostrarSecao('alterar')">
-            <i class="fa-solid fa-edit icon"></i>Alterar Pizza
-        </button>
+            <button onclick="gerarRegistrarVendas('registrar')">
+                <i class="fa-solid fa-money-bill"></i> Registrar Vendas
+            </button>
 
-        <button onclick="gerarRelatorioVendas()">
-            <i class="fa-solid fa-money-bill"></i> Registrar Venda
-        </button>
-
-        <button onclick="gerarRelatorioVendas()">
-            <i class="fa-solid fa-rectangle-list"></i> Relatório de Vendas
-        </button>
+            <button onclick="gerarRelatorioVendas('relatório')">
+                <i class="fa-solid fa-rectangle-list"></i> Relatório de Vendas
+            </button>
+        </div>
 
 
+            <!-- Seção de Cadastro -->
+            <div id="cadastro" class="hidden">
+                <h2>Cadastrar Pizza</h2>
+                <div class="form-group">
+                    <label for="sabor">Sabor da Pizza:</label>
+                    <input type="text" id="sabor" placeholder="Digite o sabor da pizza">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" id="preco" placeholder="Digite o preço da pizza">
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredientes">Ingredientes:</label>
+                    <input type="text" id="ingredientes" placeholder="Digite os ingredientes da pizza">
+                </div>
+                <button onclick="criarCadastro()">Confirmar</button>
+                <div id="resultado">
+             </div>
+             </div>
+
+
+                <!-- Seção de Consulta -->
+          <div id="consulta" class="hidden">
+            <h2>Consultar Pizza</h2>
+            <div class="form-group">
+                <label for="saborConsulta">Sabor da Pizza:</label>
+                <input type="text" id="saborConsulta" placeholder="Digite o sabor da pizza"
+                 oninput="buscarLivro()">
+            </div>
+            <table>
+            <thead>
+                <tr>
+                  <th>Sabor:</th>
+                  <th>Preço:</th>
+                  <th>Ingredientes:</th>
+                </tr>
+            </thead>
+            <tbody id="lista-Pizza">
+                <!-- Pizza serão exibidos aqui -->
+            </tbody>
+            </table>
+          
+
+        </div>    
+                
+
+
+
+
+
+
+
+
+
+
+
+        </div>
     </div>
-
-    <!-- Seção de Cadastro -->
-    <div id="cadastro" class="hidden">
-        <h2>Cadastrar Pizza</h2>
-        <div class="form-group">
-            <label for="sabor">Sabor da Pizza:</label>
-            <input type="text" id="sabor" placeholder="Digite o sabor da pizza">
-        </div>
-
-        <div class="form-group">
-            <label for="preco">Preço:</label>
-            <input type="number" id="preco" placeholder="Digite o preço da pizza">
-        </div>
-
-        <div class="form-group">
-            <label for="ingredientes">Ingredientes:</label>
-            <input type="text" id="ingredientes" placeholder="Digite os ingredientes da pizza">
-        </div>
-        <button onclick="criarCadastro()">Confirmar</button>
-        <div id="resultado"></div>
-        </div>
-    </div>
-<script src="pizza.js"></script>
+    <script src="pizza.js"></script>
 </body>
 </html>

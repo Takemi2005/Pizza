@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japa Pizza</title>
+    <link rel="stylesheet" href="pizza.css">
+
+</head>
+<body>
+    <div id="login" class="container">
+        <h1>Bem-vindo á nossa Pizzaria</h1>
+        <h2>Faça login para continuar</h2>
+        <div class="form-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+        <p><button onclick="validarLogin()">Entrar</button></p>
+        <!-- <p><button onclick="mostrarcadastroUsuario()">Cadastrar novo usuário</button></p>
+        <p><button onclick="esquecerSenha()">Esqueci a senha</button></p> -->
+        <p id="mensagem" class="mensagem hidden"></p>
+    </div>
+    
+
+
+    <!-- Formulário de Cadastro de  Novo Usuario -->
+
+
+    <script src="pizza.js"></script>
+</body>
+</html>
