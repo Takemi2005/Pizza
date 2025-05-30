@@ -1,9 +1,11 @@
 function exibirMensagem(texto,tipo) {
  const mensagem = document.getElementById("mensagem");
  mensagem.textContent = texto;
+ 
  // Adiciona a classe de estilo(sucesso ou erro)
   mensagem.className = `mensagem ${tipo}`;
   mensagem.classList.remove= ("hidden");
+
 
   // Remove a classe de erro após 3 segundos
   setTimeout(() => {
