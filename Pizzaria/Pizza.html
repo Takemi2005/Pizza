@@ -8,35 +8,29 @@
     <link href="ai-generated-hot-pepperoni-pizza-slice-with-melting-cheese-on-transparent-background-stock-png.webp" rel="icon" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <title>Japa pizza</title>
+    <title>Japa Pizza</title>
 <body>
-
-       <div class="container">
-          <h1>Bem-Vindos a JAPA PIZZA!</h1>
-       <div class="menu">
-
+<div class="container">
+    <h1>Pizzaria Japa Pizza!</h1>
+  <div class="menu">
         <button onclick="mostrarSecao('cadastro')">
             <i class="fa-solid fa-pizza-slice"></i> Cadastrar Pizza
           </button>
-
         <button onclick="mostrarSecao('consulta')">
-            <i class="fa-solid fa-magnifying-glass-dollar"></i> Consultar Pizza
+            <i class="fas fa-search icon"></i> Consultar Pizza
           </button>
-
         <button onclick="mostrarSecao('alterar')">
             <i class="fas fa-edit icon"></i> Alterar Pizza
           </button>
-
         <button onclick="mostrarSecao('venda')">
-           <i class="fa-solid fa-list-ol"></i> Registrar Venda
+            <i class="fa-solid fa-money-bill"></i> Registrar Venda
           </button>
-
         <button onclick="gerarRelatorioVendas()">
             <i class="fa-solid fa-rectangle-list"></i> Relatório de Vendas
             </button>
   </div>
 
-    <!--Secao de cadastro-->
+  <!--Secao de cadastro-->
     <div id="cadastro" class="hidden">
       <div class="form group">
           <label for="nome">Nome da Pizza:</label>
@@ -51,29 +45,29 @@
             <input type="text" id="descricao" placeholder="Digite a descrição da pizza">
     </div>
     <button onclick="criarCadastro()">Confirmar</button>
-    <label id="mensagem"></label>
-    </div>
+    <label id="mensagem-cadastro"></label>
+  </div>
 
   <!-- Seçao de consulta -->
   <div id="consulta" class="hidden">
     <h2>Consultar Pizzas</h2>
     <input type="text" id="busca" placeholder="Buscar por Nome" oninput="buscarPizza()">
     <table>
-    <thead>
-    <tr>
+        <thead>
+            <tr>
                 <th>Nome</th>
                 <th>Descrição</th>
                 <th>Preço</th>
-    </tr>
-    </thead>
-    <tbody id="lista-pizzas">
-    <!-- as pizzas serao exibidos aqui -->
-    </tbody>
+            </tr>
+        </thead>
+        <tbody id="lista-pizzas">
+            <!-- as pizzas serao exibidos aqui -->
+        </tbody>
     </table>
-     </div>
+  </div>
 
 
-    <!-- Seção de Alteração -->
+<!-- Seção de Alteração -->
     <div id="alterar" class="hidden">
       <h2>Alterar Pizza</h2>
       <input type="text" id="busca-alterar" placeholder="Buscar por nome" oninput="buscarPizzaParaAlterar()">
@@ -92,6 +86,7 @@
         </div>
         <button onclick="alterarPizza()">Salvar Alterações</button>
       </div>
+      <label id="mensagem-alterar"></label>
     </div>
 
     <!-- Seção de Venda -->
@@ -137,8 +132,7 @@
     <!-- Mensagem e Informação do Site -->
     <div id="mensagem" class="hidden"></div>
   </div>
-  </div>
-
+</div>
 
 
     <script src="pizza.js"></script>
